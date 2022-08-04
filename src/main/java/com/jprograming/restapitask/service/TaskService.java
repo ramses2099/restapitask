@@ -20,4 +20,14 @@ public class TaskService {
     public List<Task>getTasks(){
         return taskRepository.findAll();
     }
+
+    public void addNewTask(Task task) {
+        taskRepository.save(task);
+    }
+
+    public void deleteTask(Long id) {
+        taskRepository.deleteById(id);
+    }
+
+
 }
